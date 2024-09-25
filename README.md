@@ -27,9 +27,30 @@
 ### ■ 헤더
 ![조건부 헤더](screenshot/header.png)
 
+### ■ 마이 페이지
 
+#### ■ 내 프로필
+![내 프로필](screenshot/mypage.png)
 
+#### ■ 내 신청서
+![내 신청서](screenshot/myrequest.png)
 
+#### ■ 내 신고
+![내 신고](screenshot/myreport.png)
 
+#### ■ 내 리뷰
+![내 리뷰](screenshot/myreview.png)
+
+### ■ 검색
+![검색](screenshot/search.png)
+
+### ■ 견적 신청서
+![견적신청서](screenshot/request.png)
+
+### ■ 신고
+![신고](screenshot/report.png)
+
+### ■ 리뷰
+![리뷰](screenshot/review.png)
 
 
