@@ -1,0 +1,165 @@
+@use "variables";
+
+.index {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.aside {
+  width: 180px;
+  z-index: 10;
+}
+
+.container {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 16px 16px;
+  background-color: variables.$color-200;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    padding: 8px 0;
+    font-weight: bold;
+    & > svg {
+      font-size: 24px;
+    }
+  }
+
+  .data-grid-wrapper {
+    width: 100%;
+    height: 100%;
+    & > .data-grid {
+      width: 100%;
+      border: 0;
+    }
+  }
+}
+
+.modal-style {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px; // 모서리 둥글게
+  padding: 20px; // 패딩
+  width: 90%; // 너비 조정
+  max-width: 360px; // 화면 크기에 맞춰 조정
+  outline: none; // 기본 테두리 제거
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  & > .title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  button {
+    margin-top: 20px; // 버튼 간격
+    width: 100%; // 버튼 전체 너비
+  }
+
+  & > div {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 0;
+    & * {
+      font-size: 14px;
+    }
+  }
+
+  & :global(.btn-group) {
+    display: flex;
+    gap: 16px;
+    & > button:first-child {
+      color: variables.$color-700;
+      border: 0.5px solid variables.$color-700;
+    }
+
+    & > button:nth-child(2) {
+      color: #0275d8;
+      border: 0.5px solid #0275d8;
+    }
+  }
+}
+
+.nav-list {
+  & > .home-link-wrapper {
+    position: relative;
+    & .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20px;
+      padding: 28px 0;
+      position: relative;
+
+      & > img {
+        height: 100%;
+      }
+    }
+  }
+
+  & > a {
+    text-decoration: none;
+  }
+
+  .list-item {
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: 12px;
+    color: variables.$color-900;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 16px;
+    box-sizing: border-box;
+
+    & svg {
+      font-size: 18px;
+    }
+
+    &:hover:not(.selected) {
+      transform: scale(1.05); /* 호버 시 약간 커지는 효과 */
+      background-color: variables.$color-100;
+      border: 0.5px solid variables.$COLOR_PRIMARY;
+      color: variables.$COLOR_PRIMARY;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    &.selected {
+      background-color: variables.$COLOR_PRIMARY;
+      color: variables.$color-100;
+    }
+  }
+}
+
+.customPagination {
+  display: flex;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  margin: 0; /* 필요에 따라 여백 조정 */
+}
+
+.customButton {
+  padding: 6px 12px; /* 패딩 조정 */
+  font-size: 14px; /* 글자 크기 조정 */
+}
+
+.buttonContainer {
+  padding: 16px 0;
+  display: flex;
+  & > button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  //justify-content: flex-end; /* 오른쪽 정렬 */
+}

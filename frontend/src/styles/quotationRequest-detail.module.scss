@@ -1,0 +1,131 @@
+@use "variables";
+
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: variables.$HEADER_HEIGHT;
+
+  & > .container {
+    width: 100%;
+    max-width: variables.$CONTAINER_WIDTH;
+    box-sizing: border-box;
+    padding: 0 24px;
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    & > .custom-stepper {
+      & > .stepper {
+        height: 320px;
+      }
+    }
+
+    & > .quotationRequest-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    & > .create-button-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 16px 0;
+
+      & > .sub-title {
+        text-align: center;
+        margin-top: 24px;
+      }
+
+      & > .create-button {
+        background-color: variables.$COLOR_PRIMARY;
+      }
+    }
+
+    & > .no-content {
+      text-align: center;
+      color: #989898;
+    }
+
+    & > .quotation-card {
+      margin: 16px 0;
+
+      & > .quotation-sub-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px;
+
+        & > .card-sub-title {
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          gap: 16px;
+          margin: 0 16px;
+          opacity: 0.9;
+          color: #212529;
+          font-weight: 600;
+
+          & > .updated-at {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          & > .total {
+            display: flex;
+            flex-direction: row;
+
+            & > .price {
+              color: variables.$COLOR_PRIMARY;
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+        }
+
+        & > .button-container {
+          display: flex;
+
+          & > .button-div {
+            display: flex;
+            justify-content: end;
+            margin: 16px;
+            gap: 16px;
+
+            & > .cancel-button {
+              border-color: variables.$COLOR_PRIMARY;
+              color: variables.$COLOR_PRIMARY;
+            }
+
+            & > .edit-button {
+              border-color: variables.$COLOR_PRIMARY;
+              color: variables.$COLOR_PRIMARY;
+            }
+          }
+        }
+      }
+
+      & > .quotation-info {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        & > .swiper {
+          display: flex;
+          flex-direction: row;
+
+          & > .slide {
+            & > .image {
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
